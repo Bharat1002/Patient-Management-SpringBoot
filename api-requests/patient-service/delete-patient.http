@@ -1,0 +1,5 @@
+### Delete request to delete patient
+DELETE http://localhost:4000/patients/a916c9f9-ff5a-4e16-bba1-ae98e7dce556
+Content-Type: application/json
+
+###
