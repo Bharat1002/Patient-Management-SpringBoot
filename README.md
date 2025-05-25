@@ -1,4 +1,27 @@
-# Patient Management System with Spring Boot
+# Patient Management Microservices System
+
+## Overview:
+A comprehensive microservices-based Patient Management System utilizing Java and Spring Boot. The system is architected to handle patient data, billing processes, authentication, and analytics, ensuring scalability and maintainability.
+
+## Key Features:
+
+- **Microservices Architecture**: Implemented distinct services for patients, billing, authentication, analytics, and an API gateway to manage inter-service communication.
+
+- **Spring Boot & Spring Cloud**: Leveraged Spring Boot for rapid application development and Spring Cloud for service discovery and configuration management.
+
+- **gRPC Integration**: Utilized gRPC for efficient, low-latency communication between services, particularly between billing and analytics services.
+
+- **Kafka Messaging**: Integrated Apache Kafka to handle asynchronous messaging and ensure reliable data exchange between services.
+
+- **Docker**: Containerized all services and orchestrated them using Docker for streamlined development and deployment.
+
+- **PostgreSQL Database**: Used PostgreSQL for persistent data storage for Auth and Patient services.
+
+- **Security**: Implemented authentication and authorization mechanisms to secure service endpoints.
+
+- **Testing**: Conducted integration testing to ensure seamless interaction between microservices.
+
+## Docker Setup
 
 kafka container
 ```
