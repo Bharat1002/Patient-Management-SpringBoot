@@ -1,6 +1,5 @@
-#spring.application.name=api-gateway
 server:
-  port: 4004
+  port: 4004 # Gateway listens on port 4004
 
 spring:
   cloud:
@@ -13,6 +12,7 @@ spring:
           filters:
             - StripPrefix=1
 
+        # Route for /api/patients/** to patient-service
         - id: patient-service-route
           uri: http://host.docker.internal:4000
           predicates:
@@ -21,6 +21,7 @@ spring:
             - StripPrefix=1
             - JwtValidation
 
+        # Route for /api/docs/patients to patient-service /v3/api-docs
         - id: api-docs-patient-route
           uri: http://host.docker.internal:4000
           predicates:
@@ -29,7 +30,7 @@ spring:
             - RewritePath=/api-docs/patients,/v3/api-docs
 
         - id: api-docs-auth-route
-          uri: http://host.docker.internal:4005
+          uri: http:/host.docker.internal:4005
           predicates:
             - Path=/api-docs/auth
           filters:
